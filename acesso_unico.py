@@ -8,12 +8,16 @@ def gerar_relatorio_unico_TRCT():
     sleep(1)
     # Clicar na tela do unico para ativar
     pyautogui.click(34,5)
-    sleep(0.5)
+    sleep(1)
+    # desmarcar empresa
+    pyautogui.click(194,55)
+    pyautogui.click(88,248)
+    sleep(1)
     # calculos -> folha normal individual (ctrl + N)
     pyautogui.hotkey('ctrl', 'n')
     sleep(2)
     # selecionar empresa (2031)
-    pyautogui.hotkey('esc')
+    # pyautogui.hotkey('esc')
     pyautogui.typewrite('2031')
     pyautogui.press('enter')
     sleep(2)
@@ -91,8 +95,6 @@ def gerar_relatorio_unico_ANALITICO():
 def gerar_relatorio_unico_FICHA_AUXILIAR():
     # 3
     sleep(1)
-    # Clicar na tela do unico para ativar
-    pyautogui.click(34,5)
     # relatórios -> periódicos -> ficha registro auxiliar
     pyautogui.hotkey('alt', 'r', 'i', 'f')
     # selecionar colaborador
