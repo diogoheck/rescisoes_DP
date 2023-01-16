@@ -3,9 +3,19 @@ import pyautogui
 from time import sleep
 
 
-def gerar_relatorio_unico_TRCT():
+def gerar_relatorio_unico_TRCT(lista_dados):
+    print('*' * 100)
+    print('*' * 100)
+    print('Favor abrir a tela do unico e depois clicar em qualquer tecla para continuar'.upper())
+    print('*' * 100)
+    print('*' * 100)
+    input('')
+    pyautogui.click(1210,59)
+    sleep(0.5)
+    pyautogui.move(0, 20)
+    pyautogui.click()
     # 1
-    sleep(1)
+    sleep(2)
     # Clicar na tela do unico para ativar
     pyautogui.click(34,5)
     sleep(1)
@@ -18,11 +28,11 @@ def gerar_relatorio_unico_TRCT():
     sleep(2)
     # selecionar empresa (2031)
     # pyautogui.hotkey('esc')
-    pyautogui.typewrite('2031')
+    pyautogui.typewrite(lista_dados['COD_EMPRESA'])
     pyautogui.press('enter')
     sleep(2)
     # selecionar colaborador (ANELISE - 3124)
-    pyautogui.typewrite('3124')
+    pyautogui.typewrite(lista_dados['COD_FUNCIONARIO'])
     pyautogui.press('enter')
     # sleep(0.5)
     # sleep(1)
@@ -92,14 +102,21 @@ def gerar_relatorio_unico_ANALITICO():
     sleep(0.5)
     pyautogui.click(920,123)
 
-def gerar_relatorio_unico_FICHA_AUXILIAR():
+def gerar_relatorio_unico_FICHA_AUXILIAR(lista_dados):
     # 3
-    sleep(1)
+    sleep(2)
     # relatórios -> periódicos -> ficha registro auxiliar
-    pyautogui.hotkey('alt', 'r', 'i', 'f')
+    # pyautogui.hotkey('alt', 'r', 'i', 'f')
+    pyautogui.click(1064,34)
+    sleep(0.5)
+    pyautogui.move(0, 100)
+    sleep(0.5)
+    pyautogui.move(-70, 0)
+    sleep(0.5)
+    pyautogui.click()
     # selecionar colaborador
     sleep(2)
-    pyautogui.typewrite('3124')
+    pyautogui.typewrite(lista_dados['COD_FUNCIONARIO'])
     # enter
     pyautogui.press('enter')
     # visualizar
