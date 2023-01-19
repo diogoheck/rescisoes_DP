@@ -135,6 +135,7 @@ def gerar_relatorio_unico_FICHA_AUXILIAR(lista_dados):
     # renomear "TRCT" e transferir para pasta O:\Clientes\Kuchak\Dpto Pessoal\2023\2031 MATRIZ\012023\RESCISÕES\RES ANELISE TOEBE
     sleep(1)
     pyautogui.typewrite('x:\TEMP_DP_RESCISOES\FICHA AUXILIAR')
+    sleep(1)
     # salvar (confirmar)
     pyautogui.press('enter')
     # fechar relatorio analitco

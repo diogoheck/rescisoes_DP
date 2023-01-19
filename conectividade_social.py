@@ -112,19 +112,6 @@ def acessar_conectividade_social(lista_dados):
             driver.close()
     driver.switch_to.window(janela_inicial)
     input('')
-    
-    
-    
-
-    # sleep(2)
-    # pyautogui.hotkey('ctrl', 'p')
-    # sleep(1)
-    # sleep(2)
-    
-    # botao_imprimir = driver.find_element(By.XPATH, '//a[@href="javascript:impr_extrato_fgts_trabalhador_impressao();"]')
-    # botao_imprimir.click()u:\temp_dp_rescisoes\extrato
-
-
 
 
 
